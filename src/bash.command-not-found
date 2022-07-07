@@ -77,7 +77,7 @@ print_message () {
 
     # Print a randomly selected message, but only about half the time to annoy the user a
     # little bit less.
-    if [[ $((${RANDOM} % 2)) -lt 1 ]]; then
+    if [[ $((${RANDOM} % 1)) -lt 1 ]]; then
         message=${messages[${RANDOM} % ${#messages[@]}]}
         printf "\\n  %s\\n\\n" "$(tput bold)$(tput setaf 1)${message}$(tput sgr0)" >&2
     fi
